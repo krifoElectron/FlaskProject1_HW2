@@ -1,0 +1,5 @@
+.main-image {
+    background: url('/static/images/main-image.png') no-repeat;
+    background-position: center center;
+    height: 300px;
+}
