@@ -15,7 +15,7 @@
                 <div class="card-body">
                     <h2 class="h5 card-title">{{ tour.title }}</h2>
                     <p class="card-text">{{ tour.description|truncate(100, True) }}</p>
-                    <a href="{{ '/tours/{}'.format(tour.id) }}" class="btn btn-sm btn-primary">Подробнее</a>
+                    <a href="{{ url_for('render_tour', tour_id=tour.id) }}" class="btn btn-sm btn-primary">Подробнее</a>
                 </div>
             </div>
         </div>

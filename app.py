@@ -11,8 +11,8 @@ tour_list = [{'id': tour_id, **tour} for tour_id, tour in tours.items()]
 
 @app.route('/')
 def render_main():
-    return render_template('index.html', title=title, subtitle=subtitle, description=description, tour_list=tour_list,
-                           departure_list=departure_list)
+    return render_template('index.html', title=title, subtitle=subtitle, description=description,
+                           tour_list=tour_list[:6], departure_list=departure_list)
 
 
 @app.route('/departures/<departure>/')
@@ -54,4 +54,5 @@ def render_tour(tour_id):
                            picture=picture, tour_description=tour_description, price=price)
 
 
-app.run()
+if __name__ == '__main__':
+    app.run()
